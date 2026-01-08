@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EU</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #6689fc, #64a2ff);
+            text-align: center;
+            padding: 50px;
+            color: #333;
+            overflow: hidden; /* Para que las flores no salgan del viewport */
+        }
+        .flowers {
+            font-size: 3em;
+            margin: 20px 0;
+            position: relative;
+        }
+        .flower {
+            display: inline-block;
+            margin: 0 10px;
+            animation: float 5s ease-in-out infinite;
+            cursor: pointer;
+            transition: transform 0.3s, color 0.3s;
+        }
+        .flower:nth-child(1) { animation-delay: 0s; } /* Tulipán */
+        .flower:nth-child(2) { animation-delay: 1s; } /* Lirio */
+        .flower:nth-child(3) { animation-delay: 2s; } /* Rosa */
+        
+        @keyframes float {
+            0%, 100% { transform: translateX(0); }
+            50% { transform: translateX(50px); } /* Flota de izquierda a derecha */
+        }
+        
+        .flower:hover {
+            transform: scale(1.2); /* Crece al pasar el mouse */
+            color: #ff69b4; /* Cambia a rosa al hover */
+        }
+        
+        .message {
+            font-size: 1.5em;
+            margin: 20px 0;
+            line-height: 1.6;
+        }
+        .signature {
+            font-style: italic;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>🌷 LOSBIU 🌹</h1>
+    <div class="flowers">
+        <span class="flower" onclick="alert('¡Tulipán: Símbolo de esperanza!')">🌷</span>
+        <span class="flower" onclick="alert('¡Lirio: Símbolo de pureza!')">🌸</span>
+        <span class="flower" onclick="alert('¡Rosa: Símbolo de amor eterno!')">🌹</span>
+    </div>
+    <div class="message">
+        Querida NIKI,<br>
+        Gracias por ser una de las personas más especiales en mi vida, 
+        ahora me toca decirte adiós no se por cuanto, pero espero que sea por poco tiempo 
+        así que te envió estas flores como muestra de mi cariño y amor hacia ti. Aun me quedan muchas cosas 
+        por decirte que I had really gotten hooked on what you told me the other day about getting married at 25 I got so hooked that I can't date girls just for you anymore. ,<br>
+        .
+    </div>
+    <div class="signature">
+        🌺 DELIRIO DE MI CORAZON. 🌺
+    </div>
+
+    <script>
+        // Opcional: Más interactividad con JS si quieres
+        // Por ejemplo, al hacer clic, las flores cambian de color permanentemente
+        document.querySelectorAll('.flower').forEach(flower => {
+            flower.addEventListener('click', () => {
+                flower.style.color = '#' + Math.floor(Math.random()*16777215).toString(16); // Color aleatorio
+            });
+        });
+    </script>
+</body>
+</html>
