@@ -11,7 +11,7 @@
             text-align: center;
             padding: 50px;
             color: #333;
-            overflow: hidden; /* Para que las flores no salgan del viewport */
+            overflow: hidden; 
         }
         .flowers {
             font-size: 3em;
@@ -25,18 +25,18 @@
             cursor: pointer;
             transition: transform 0.3s, color 0.3s;
         }
-        .flower:nth-child(1) { animation-delay: 0s; } /* Tulipán */
-        .flower:nth-child(2) { animation-delay: 1s; } /* Lirio */
-        .flower:nth-child(3) { animation-delay: 2s; } /* Rosa */
+        .flower:nth-child(1) { animation-delay: 0s; } 
+        .flower:nth-child(2) { animation-delay: 1s; } 
+        .flower:nth-child(3) { animation-delay: 2s; } 
         
         @keyframes float {
             0%, 100% { transform: translateX(0); }
-            50% { transform: translateX(50px); } /* Flota de izquierda a derecha */
+            50% { transform: translateX(50px); } /
         }
         
         .flower:hover {
-            transform: scale(1.2); /* Crece al pasar el mouse */
-            color: #ff69b4; /* Cambia a rosa al hover */
+            transform: scale(1.2); 
+            color: #ff69b4; 
         }
         
         .message {
@@ -70,13 +70,13 @@
     </div>
 
     <script>
-        // Opcional: Más interactividad con JS si quieres
-        // Por ejemplo, al hacer clic, las flores cambian de color permanentemente
+       
         document.querySelectorAll('.flower').forEach(flower => {
             flower.addEventListener('click', () => {
-                flower.style.color = '#' + Math.floor(Math.random()*16777215).toString(16); // Color aleatorio
+                flower.style.color = '#' + Math.floor(Math.random()*16777215).toString(16);
             });
         });
     </script>
 </body>
 </html>
+
